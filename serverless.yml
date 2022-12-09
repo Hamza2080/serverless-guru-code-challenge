@@ -1,0 +1,29 @@
+service: serverless-typescript-starter
+frameworkVersion: '3'
+
+package:
+  individually: true
+
+plugins:
+  - serverless-esbuild
+  - serverless-dynamodb-local
+  - serverless-offline
+
+custom:
+  dynamodb: ${file(resources/config/dynamodb-config.yml)}
+  esbuild: ${file(resources/config/esbuild-config.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  memorySize: 128
+  timeout: 30
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  environment:
+    Notes_Table_Name: ${self:provider.stage}-notes
+
+functions: ${file(resources/lambda-function.yml)}
+
+resources:
+  - ${file(resources/dynamodb.yml)}

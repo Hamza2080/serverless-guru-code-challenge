@@ -1,0 +1,8 @@
+add-note:
+  handler: src/add-note/index.handler
+  events:
+    - 
+      http: 
+        method: POST
+        path: note
+        cors: true

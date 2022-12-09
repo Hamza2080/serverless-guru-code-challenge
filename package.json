@@ -1,0 +1,26 @@
+{
+  "name": "serverless-typescript-starter",
+  "version": "0.1.0",
+  "description": "A TypeScript starter for Serverless Framework",
+  "main": "handler.js",
+  "scripts": {
+    "test": "serverless-bundle test",
+    "prepare": "serverless dynamodb install",
+    "dev": "serverless offline start"
+  },
+  "author": "Hamza Javed",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hamza2080/serverless-guru-code-challenge.git"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.109",
+    "esbuild": "^0.16.3",
+    "serverless": "^3.25.1",
+    "serverless-dynamodb-local": "^0.2.40",
+    "serverless-esbuild": "^1.33.2",
+    "serverless-offline": "^12.0.1"
+  },
+  "dependencies": {}
+}
