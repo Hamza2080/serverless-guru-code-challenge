@@ -22,6 +22,7 @@ provider:
   region: ${opt:region, 'us-east-1'}
   environment:
     Notes_Table_Name: ${self:provider.stage}-notes
+    ENV: ${self:provider.stage}
 
 functions: ${file(resources/lambda-function.yml)}
 

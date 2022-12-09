@@ -8,3 +8,4 @@ node_modules/
 .webpack
 .build
 .DS_Store
+coverage/
