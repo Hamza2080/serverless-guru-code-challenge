@@ -6,3 +6,12 @@ add-note:
         method: POST
         path: note
         cors: true
+
+update-note:
+  handler: src/update-note/index.handler
+  events:
+    - 
+      http: 
+        method: PATCH
+        path: note
+        cors: true
