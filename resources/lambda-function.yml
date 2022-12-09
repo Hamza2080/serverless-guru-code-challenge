@@ -15,3 +15,12 @@ update-note:
         method: PATCH
         path: note
         cors: true
+
+delete-note:
+  handler: src/delete-note/index.handler
+  events:
+    - 
+      http: 
+        method: DELETE
+        path: note
+        cors: true
