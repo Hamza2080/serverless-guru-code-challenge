@@ -7,7 +7,7 @@ phases:
       nodejs: latest
     commands:
       - npm ci
-  test:
+  build:
     commands:
       - npm run test
 
