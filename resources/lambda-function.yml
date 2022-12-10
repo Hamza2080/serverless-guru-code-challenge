@@ -24,3 +24,21 @@ delete-note:
         method: DELETE
         path: note
         cors: true
+
+get-note-by-id:
+  handler: src/get-note-by-id/index.handler
+  events:
+    - 
+      http: 
+        method: GET
+        path: note
+        cors: true
+
+get-all-notes:
+  handler: src/get-notes/index.handler
+  events:
+    - 
+      http: 
+        method: GET
+        path: notes
+        cors: true
