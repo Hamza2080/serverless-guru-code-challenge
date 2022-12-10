@@ -1,4 +1,4 @@
-service: serverless-typescript-starter
+service: cloud-guru-notes-todo
 frameworkVersion: '3'
 
 package:

@@ -6,14 +6,10 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
-      - npm install -g serverless
       - npm ci
-  build:
+  test:
     commands:
-      - serverless deploy --stage ${STAGE_NAME}
-  post_build:
-    commands:
-      - echo deployed successfully
+      - npm run test
 
 cache:
   paths:
