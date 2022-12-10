@@ -19,7 +19,7 @@ provider:
   memorySize: 128
   timeout: 30
   stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'us-east-1'}
+  region: ${opt:region, 'eu-west-3'}
   environment:
     Notes_Table_Name: ${self:provider.stage}-notes
     ENV: ${self:provider.stage}
