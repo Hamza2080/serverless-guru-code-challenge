@@ -93,6 +93,23 @@ npm run eslint
 ```bash 
 npm run eslint:fix
 ```
+#### Api Docs
+    - POST: /note
+      Body: { note: string, createdBy: string, topic: string }
+      
+    - PATCH: /note
+      Body: { sk: string, note: string, topic: string }
+      
+    - DELETE: /note
+      queryStringParameters: { sk: string }
+      
+    - GET: /note
+      queryStringParameters: { sk: string }
+      
+    - GET: /notes
+      queryStringParameters: { limit: string, next: string } // next is for nextPageToken
+
+```
 
 ### Tech
  - TypeScript 
