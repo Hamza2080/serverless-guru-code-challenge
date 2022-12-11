@@ -1,4 +1,4 @@
-service: cloud-guru-notes-todo
+service: cloud-guru-notes
 frameworkVersion: '3'
 
 package:
